@@ -48,6 +48,7 @@ public class CreateServlet extends HttpServlet {
             m.setCreated_at(currentTime);
             m.setUpdated_at(currentTime);
 
+            // データベースに保存
             em.getTransaction().begin();
             em.persist(m);
             em.getTransaction().commit();
